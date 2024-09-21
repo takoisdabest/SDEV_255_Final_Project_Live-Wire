@@ -17,7 +17,7 @@ const CourseForm = ({ course, onSave }) => {
             await api.post('/courses', data);
         }
         onSave();
-    };
+    }
 
     return (
         <form onSubmit={handleSubmit}>
@@ -44,6 +44,6 @@ const CourseForm = ({ course, onSave }) => {
             <button type="submit">Save</button>
         </form>
     );
-};
+}
 
 export default CourseForm;
