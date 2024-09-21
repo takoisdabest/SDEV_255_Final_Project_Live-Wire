@@ -13,17 +13,17 @@ const CourseList = () => {
     const fetchCourses = async () => {
         const response = await api.get('/courses');
         setCourses(response.data.data);
-    };
+    }
 
     const handleDelete = async (id) => {
         await api.delete(`/courses/${id}`);
         fetchCourses();
-    };
+    }
 
     const handleSave = () => {
         setEditingCourse(null);
         fetchCourses();
-    };
+    }
 
     return (
         <div>
@@ -41,6 +41,6 @@ const CourseList = () => {
             </ul>
         </div>
     );
-};
+}
 
 export default CourseList;
